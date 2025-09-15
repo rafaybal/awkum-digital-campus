@@ -17,6 +17,11 @@ export default {
         'heading': ['Inter', 'system-ui', 'sans-serif'],
         'body': ['Inter', 'system-ui', 'sans-serif'],
       },
+      boxShadow: {
+        'elegant': '0 4px 20px -2px hsl(var(--primary) / 0.1)',
+        'card': '0 2px 10px -1px hsl(var(--primary) / 0.08)',
+        'hero': '0 20px 60px -10px hsl(var(--primary) / 0.2)',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
