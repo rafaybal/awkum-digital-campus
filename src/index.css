@@ -2,39 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* AWKUM University Design System - Academic Excellence Theme */
 
 @layer base {
   :root {
+    /* Primary - Deep Academic Blue */
+    --primary: 210 100% 26%;
+    --primary-foreground: 0 0% 98%;
+    --primary-light: 210 90% 35%;
+    --primary-glow: 210 85% 45%;
+    
+    /* Secondary - Academic Gold */
+    --secondary: 45 85% 58%;
+    --secondary-foreground: 210 100% 15%;
+    --secondary-light: 45 90% 68%;
+    
+    /* Background System */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 210 15% 12%;
+    
+    /* Surface Colors */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 210 15% 12%;
+    --surface-elevated: 210 20% 97%;
+    
+    /* Interactive Elements */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --popover-foreground: 210 15% 12%;
+    
+    /* Status Colors */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 210 100% 15%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    
+    /* Neutral System */
+    --muted: 210 20% 94%;
+    --muted-foreground: 210 10% 45%;
+    --accent: 210 25% 92%;
+    --accent-foreground: 210 20% 20%;
+    
+    /* Border & Input */
+    --border: 210 20% 88%;
+    --input: 210 20% 90%;
+    --ring: 210 100% 45%;
+    
+    /* Academic Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-light)) 50%, hsl(var(--secondary)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--surface-elevated)) 100%);
+    
+    /* Shadows */
+    --shadow-elegant: 0 4px 20px -2px hsl(var(--primary) / 0.1);
+    --shadow-card: 0 2px 10px -1px hsl(var(--primary) / 0.08);
+    --shadow-hero: 0 20px 60px -10px hsl(var(--primary) / 0.2);
+    
+    /* Typography */
+    --font-heading: 'Inter', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    
+    /* Layout */
+    --radius: 0.75rem;
+    --container-max: 1400px;
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 
     --radius: 0.5rem;
 
@@ -56,41 +91,38 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Dark theme for academic site */
+    --background: 210 20% 8%;
+    --foreground: 210 10% 92%;
+    
+    --primary: 210 90% 65%;
+    --primary-foreground: 210 100% 8%;
+    --primary-light: 210 80% 70%;
+    
+    --secondary: 45 80% 65%;
+    --secondary-foreground: 210 100% 10%;
+    
+    --card: 210 15% 12%;
+    --card-foreground: 210 10% 88%;
+    --surface-elevated: 210 15% 15%;
+    
+    --popover: 210 15% 12%;
+    --popover-foreground: 210 10% 88%;
+    
+    --muted: 210 15% 18%;
+    --muted-foreground: 210 8% 55%;
+    
+    --accent: 210 15% 20%;
+    --accent-foreground: 210 10% 85%;
+    
+    --border: 210 15% 22%;
+    --input: 210 15% 20%;
+    --ring: 210 90% 65%;
+    
+    /* Dark gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-light)) 50%, hsl(var(--secondary)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--surface-elevated)) 100%);
   }
 }
 
@@ -99,7 +131,52 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply mx-auto max-w-[var(--container-max)] px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary to-primary-light text-primary-foreground;
+    @apply hover:shadow-lg transform hover:-translate-y-0.5;
+    @apply transition-all duration-300;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground;
+    @apply hover:bg-secondary-light transform hover:-translate-y-0.5;
+    @apply transition-all duration-300;
+  }
+  
+  .card-elevated {
+    @apply bg-gradient-to-br from-card to-surface-elevated;
+    @apply shadow-card border border-border/50;
+    @apply hover:shadow-elegant transform hover:-translate-y-1;
+    @apply transition-all duration-300;
+  }
+  
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
