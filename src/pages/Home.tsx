@@ -114,15 +114,6 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Icon Test - Remove this after verification */}
-      <div className="fixed top-4 right-4 z-50 bg-white p-2 rounded shadow-lg border">
-        <div className="flex items-center gap-2 text-sm">
-          <Users className="h-4 w-4 text-blue-500" />
-          <GraduationCap className="h-4 w-4 text-green-500" />
-          <Award className="h-4 w-4 text-yellow-500" />
-          <span>Icons Test</span>
-        </div>
-      </div>
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div 
